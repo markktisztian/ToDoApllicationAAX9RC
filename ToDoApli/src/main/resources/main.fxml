@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <VBox layoutX="12.0" layoutY="65.0" prefHeight="134.0" prefWidth="74.0">
+         <children>
+            <Label prefHeight="40.0" prefWidth="60.0" text="Task:" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="45.0" prefWidth="67.0" text="Start Date:" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="41.0" prefWidth="74.0" text="Finish Date:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="91.0" layoutY="74.0" prefHeight="125.0" prefWidth="130.0" spacing="17.0" AnchorPane.bottomAnchor="200.4">
+         <children>
+            <TextField fx:id="dp_task" />
+            <DatePicker fx:id="dp_startdate" />
+            <DatePicker fx:id="dp_finishdate" />
+         </children>
+      </VBox>
+      <TableView fx:id="tv_tasks" layoutX="229.0" layoutY="60.0" prefHeight="334.0" prefWidth="382.0">
+        <columns>
+          <TableColumn fx:id="cl_task" prefWidth="168.1999969482422" text="Task" />
+          <TableColumn fx:id="cl_startdate" prefWidth="101.39996337890625" text="Start Date" />
+            <TableColumn fx:id="cl_finishdate" minWidth="6.199981689453125" prefWidth="104.5999755859375" text="Finish Date" />
+        </columns>
+      </TableView>
+      <Button fx:id="t_insert" layoutX="49.0" layoutY="214.0" mnemonicParsing="false" onAction="#Insert" prefHeight="26.0" prefWidth="50.0" text="Insert" />
+      <Button fx:id="t_delete" layoutX="131.0" layoutY="214.0" mnemonicParsing="false" onAction="#Delete" text="Delete" />
+      <Button fx:id="t_exit" layoutX="96.0" layoutY="279.0" mnemonicParsing="false" onAction="#Exit" text="Exit" textFill="RED" />
+      <AnchorPane layoutY="-1.0" prefHeight="53.0" prefWidth="618.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="232.0" layoutY="10.0" prefHeight="33.0" prefWidth="211.0" text="Todo Application" textAlignment="RIGHT" textFill="WHITE" textOverrun="LEADING_WORD_ELLIPSIS">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
